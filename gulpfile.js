@@ -20,6 +20,7 @@ gulp.task('lint', function() {
 		.pipe(jshint.reporter('jshint-stylish'));
 });
 
+/* bundle js modules */
 gulp.task('browserify', function() {
 	return browserify('./app/js/app.js')
 		.bundle()
@@ -29,7 +30,7 @@ gulp.task('browserify', function() {
 		.pipe(gulp.dest('./dist/js/'));
 });
 
-/* compile .scss files to CSS */
+/* compile .scss files to css */
 gulp.task('sass', function() {
 	return gulp.src('./app/css/styles.scss')
 		.pipe(sass({outputStyle: 'compressed'}))
@@ -53,7 +54,7 @@ gulp.task('watch', function() {
 	gulp.watch('./app/js/**/*.js', ['lint']);
 });
 
-// build js
+/* build js */
 gulp.task('js', ['lint', 'browserify']);
 
 /* default gulp task */
