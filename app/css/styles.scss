@@ -1,0 +1,36 @@
+// normalize and base styles
+// @import "base/_normalize";
+
+
+// variables and mixins
+@import "components/_vars";
+// @import "components/_mixins";
+
+
+// typography
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic');
+
+
+// main layout styles
+// @import "layouts/_main";
+// @import "layouts/_nav";
+// @import "layouts/_module";
+
+body {
+	font-family: $sans;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: $display;
+	font-weight: 700;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+}
