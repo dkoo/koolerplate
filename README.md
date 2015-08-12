@@ -3,7 +3,7 @@
 A super simple front-end framework for super quick prototyping. Just the bare minimum of stuff to start writing some code:
 
 * SASS because why not
-* Autoprefixer: forget about writing styles with prefixes
+* Autoprefixer because no one likes writing styles with prefixes
 * JSHint to check syntax (could use more testing components)
 * Browserify to manage JS modules/dependencies
 * Uglify to make it unpurty
