@@ -1,4 +1,8 @@
-/* gulpfile.js for yumhut */
+/* gulpfile
+*
+* $ npm install gulp browserify vinyl-source-stream vinyl-buffer gulp-uglify gulp-jshint gulp-sass gulp-autoprefixer --save-dev
+*
+*/
 
 var gulp = require('gulp'),
 	browserify = require('browserify'),
