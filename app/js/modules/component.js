@@ -1,5 +1,3 @@
-'use strict';
-
 var component = {
 	init: function(input) {
 		console.log(input);
