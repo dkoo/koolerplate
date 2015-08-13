@@ -1,6 +1,6 @@
 /* gulpfile
 *
-* $ npm install gulp browserify vinyl-source-stream vinyl-buffer gulp-uglify gulp-jshint gulp-sass gulp-autoprefixer --save-dev
+* $ npm install gulp browserify vinyl-source-stream vinyl-buffer gulp-uglify gulp-jshint jshint-stylish gulp-sass gulp-autoprefixer --save-dev
 *
 */
 
