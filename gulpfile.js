@@ -1,6 +1,6 @@
 /* gulpfile
 *
-* $ npm install gulp browserify vinyl-source-stream vinyl-buffer gulp-uglify gulp-jshint jshint-stylish gulp-sass gulp-autoprefixer --save-dev
+* $ npm install gulp browserify vinyl-source-stream vinyl-buffer gulp-uglify gulp-jshint jshint-stylish gulp-sass gulp-autoprefixer http st --save-dev
 *
 */
 
@@ -11,7 +11,9 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	jshint = require('gulp-jshint'),
 	sass = require('gulp-sass'),
-	autoprefixer = require('gulp-autoprefixer');
+	autoprefixer = require('gulp-autoprefixer'),
+	http = require('http'),
+	st = require('st');
 
 /* lint js files */
 gulp.task('lint', function() {
@@ -48,10 +50,10 @@ gulp.task('autoprefix', function() {
 });
 
 /* watch files for changes and execute tasks */
-gulp.task('watch', function() {
+gulp.task('watch', ['server'], function() {
 	gulp.watch('./app/css/**/*.scss', ['sass']);
 	gulp.watch('./build/css/**/*.css', ['autoprefix']);
-	gulp.watch('./app/js/**/*.js', ['lint']);
+	gulp.watch('./app/js/**/*.js', ['js']);
 });
 
 /* build js */
@@ -59,3 +61,9 @@ gulp.task('js', ['lint', 'browserify']);
 
 /* default gulp task */
 gulp.task('default', ['watch']);
+
+gulp.task('server', function(done) {
+	http.createServer(
+		st({ path: __dirname + '/', index: 'index.html', cache: false })
+	).listen(8080, done);
+});
