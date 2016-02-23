@@ -8,7 +8,7 @@ A super simple, ES6-enabled front-end boilerplate project for super quick protot
 * [webpack](https://github.com/webpack/webpack) for JS bundling
 * [Gulp](https://github.com/gulpjs/gulp) to tie it all together
 
-And that’s it! An older version using ES5 and [Browserify](http://browserify.org/) exists on the (browserify)[https://github.com/dkoo/koolerplate/tree/browserify] branch, if you prefer that setup.
+And that’s it! An older version using ES5 and [Browserify](http://browserify.org/) exists on the [browserify](https://github.com/dkoo/koolerplate/tree/browserify) branch, if you prefer that setup.
 
 # Usage
 
