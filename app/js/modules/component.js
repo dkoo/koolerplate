@@ -1,7 +1,10 @@
-var component = {
-	init: function(input) {
-		console.log(input);
+export default class Component {
+	constructor(arg) {
+		this.arg = arg;
 	}
-};
 
-module.exports = component;
+	init() {
+		console.log(this.arg);
+		return this.arg;
+	}
+}
