@@ -1,7 +1,7 @@
 # koolerplate .gitignore
 
 ## Builds
-build/
+compiled/
 dist/
 
 ## Node.js

@@ -24,7 +24,7 @@ gulp.task('lint', function() {
 gulp.task('webpack', ['lint'], function() {
 	return gulp.src('./app/js/main.js')
 		.pipe(webpack(config))
-		.pipe(gulp.dest('./build/js/'));
+		.pipe(gulp.dest('./compiled/js/'));
 });
 
 /* compile .scss files to css, with autoprefixer */
@@ -32,7 +32,7 @@ gulp.task('sass', function() {
 	return gulp.src('./app/css/styles.scss')
 		.pipe(sass({outputStyle: 'compressed'}))
 		.pipe(autoprefixer())
-		.pipe(gulp.dest('./build/css/'));
+		.pipe(gulp.dest('./compiled/css/'));
 });
 
 /* build js with lint */

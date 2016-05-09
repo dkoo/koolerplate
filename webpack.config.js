@@ -4,7 +4,7 @@ var webpack = require('webpack-stream');
 module.exports = {
 	entry: './app/js/main.js',
 	output: {
-		path: path.resolve(__dirname, 'build'),
+		path: path.resolve(__dirname, 'compiled'),
 		filename: 'main.bundle.js'
 	},
 	module: {
