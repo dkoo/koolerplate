@@ -24,6 +24,9 @@ gulp.task('lint', function() {
 gulp.task('webpack', ['lint'], function() {
 	return gulp.src('./app/js/main.js')
 		.pipe(webpack(config))
+		.on('error', function(error) {
+			this.emit('end');
+		})
 		.pipe(gulp.dest('./compiled/js/'));
 });
 
@@ -31,6 +34,7 @@ gulp.task('webpack', ['lint'], function() {
 gulp.task('sass', function() {
 	return gulp.src('./app/css/styles.scss')
 		.pipe(sass({outputStyle: 'compressed'}))
+		.on('error', sass.logError)
 		.pipe(autoprefixer())
 		.pipe(gulp.dest('./compiled/css/'));
 });
